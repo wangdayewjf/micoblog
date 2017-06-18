@@ -12,6 +12,7 @@ var cookieSession = require('cookie-session');
 partials = require('express-partials');
 
 app.use(partials());
+ app.use(flash());
 app.set("views", __dirname + "/views");
 app.set('view options', {
 layout: true
