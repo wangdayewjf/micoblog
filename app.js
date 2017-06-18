@@ -9,9 +9,6 @@ var bodyParser = require("body-parser");
 var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var cookieSession = require('cookie-session');
-
-
-
 partials = require('express-partials');
 
 app.use(partials());
