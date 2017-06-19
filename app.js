@@ -11,9 +11,6 @@ var methodOverride = require('method-override');
 var cookieSession = require('cookie-session');
 partials = require('express-partials');
 
-
-
-
 app.use(partials());
  app.use(flash());
 app.set("views", __dirname + "/views");
@@ -34,6 +31,17 @@ app.use(session({
 		})
 }));
 //app.use(express.router(routes));
+
+app.user(function(req,res,next){
+	res.local.user = req.session.user;//问：这个会直接到mongodb数据库里面获取么？
+	var err = req.flush("error");
+	var success = req.flush("success");
+	res.local.error = err.length?err:null;
+	res.local.sucess = success.length?sucess:null;
+
+	next();//执行下一个
+});
+
 app.use(router);
 app.use(express.static(path.join(__dirname, 'public')));
 

@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 var User = require("../models/user.js");
 var crypto = require('crypto');//问：这个需要安装么？
+
+
+//问：这里面可以安装拦截器么？
+
 router.get('/', function(req, res) {
 	res.render('index', {
 		title: "首页",
