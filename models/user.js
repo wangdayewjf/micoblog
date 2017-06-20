@@ -30,6 +30,30 @@ User.prototype.save = function(callback){
 		});
 	});
 }
+User.prototype.logIn = function(username,callback){
+	//mongodb验证，获取到的数据存入locals.user中。还是那个方法，通过username来查询，只是对比多了password对比
+	mongodb.open(function(err,db){
+		if(err){
+			mongodb.close();
+			return callback.call(this,err);
+		}
+		db.collection("users",function(err,collection){
+			if(err){
+				mongodb.close();//问：为什么err之后要关闭mongodb,问：这是monggodb的连接么？答：每一次查出结果时，关闭连接？
+				return callback.call(this,err);
+			}
+			collection.findOne({name:username},function(err,doc){
+				if(doc){
+					mongodb.close();
+					var user = new User(doc);
+					callback.call(this,err,user);
+				}
+			});
+
+		});
+	});
+
+}
 
 User.get = function(username,callback){
 	mongodb.open(function(err,db){

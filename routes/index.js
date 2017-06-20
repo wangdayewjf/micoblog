@@ -48,4 +48,38 @@ router.post("/reg",function(req,res){
 		});
 	});
 });
+router.get("/logIn",function(req,res){
+	res.render("logIn", {
+		title: "用户登录"
+	});
+});
+router.post("/logIn", function(req, res) {
+
+	var md5 = crypto.createHash("md5");//获得crypto中的md5加密工具
+	var password = md5.update(req.body.password).digest("base64");
+	var user  = new User({
+		name: req.body.username,
+		password:password, 
+	});
+	user.logIn(user.username,function(err,userIn){
+
+		if(userIn){
+			//这个就是获取到的user,跟自身作对比
+			if(userIn.password!=this.password){
+				req.flash("error","密码输入错误");
+				return res.redirect("/logIn");
+			}else{
+				//登录成功
+				res.session.user = user;
+				req.flash("success","登录成功");
+				return res.redirect("/");
+			}
+			
+		}else{
+			req.flash('error', '用户不存在');
+			return res.redirect('/logIn');
+		}
+	});
+	//写个登录方法，user对象中的。
+});
 module.exports = router;
