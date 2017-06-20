@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require("../models/user.js");
+var User = require("../models/user");
 var crypto = require('crypto');//问：这个需要安装么？
 
 
