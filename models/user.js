@@ -6,7 +6,7 @@ function User(user){
 }
 
 
-module.export = User;
+
 
 User.prototype.save = function(callback){
 	var user = {
@@ -53,3 +53,4 @@ User.get = function(username,callback){
 		});
 	});
 }
+module.exports = User;
