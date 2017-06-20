@@ -42,12 +42,13 @@ app.use(session({
 app.use(flash());
 
 app.use(function(req,res,next){
-	res.locals.user = req.session.user;//问：这个会直接到mongodb数据库里面获取么？
+	
+	var user = req.session.user;//问：这个会直接到mongodb数据库里面获取么？
 	var err = req.flash("error");
 	var success = req.flash("success");//问：这里面如果还没有值怎么办？回自动生成一个key?,答：先走前面完成赋值，重定向然后再在这里取出来？
 	res.locals.error = err.length?err:null;
 	res.locals.success = success.length?success:null;
-
+	res.locals.user = user;
 	next();//执行下一个
 });//拦截器的作用。debug一下看谁先执行，谁后执行。
 app.use(express.static(path.join(__dirname, 'public')));

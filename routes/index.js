@@ -42,7 +42,7 @@ router.post("/reg",function(req,res){
 				req.flash("error",err);
 				return res.redirect("/reg");
 			}
-			req.session.user = newUser ;//问：存在session里面？不是存在mongdb里面的么？问：这里的session知识一个形象其实还是req?,换句话说就是response里面的一个字段？问：这样会显示在页面中，还是为了保存user？也就是说保存到mogodb中？或者是俩者都有？
+			req.session.user = user ;//问：存在session里面？不是存在mongdb里面的么？问：这里的session知识一个形象其实还是req?,换句话说就是response里面的一个字段？问：这样会显示在页面中，还是为了保存user？也就是说保存到mogodb中？或者是俩者都有？
 			req.flash("success","注册成功");
 			res.redirect("/");
 		});
@@ -61,8 +61,8 @@ router.post("/logIn", function(req, res) {
 		name: req.body.username,
 		password:password, 
 	});
-	user.logIn(user.username,function(err,userIn){
-
+	user.logIn(user.
+		name,function(err,userIn){
 		if(userIn){
 			//这个就是获取到的user,跟自身作对比
 			if(userIn.password!=this.password){
@@ -70,7 +70,7 @@ router.post("/logIn", function(req, res) {
 				return res.redirect("/logIn");
 			}else{
 				//登录成功
-				res.session.user = user;
+				req.session.user = userIn;
 				req.flash("success","登录成功");
 				return res.redirect("/");
 			}
