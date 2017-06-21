@@ -1,4 +1,9 @@
-var mongodb = require('./db');
+//var mongodb = require('./db');
+
+var MongoClient = require('mongodb').MongoClient
+  , assert = require('assert');//问：这是不是记录日志的？
+var url = 'mongodb://localhost:27017/microblog';
+
 function Post(username, post, time) {
 	this.user = username;
 	this.post = post;
@@ -18,44 +23,44 @@ var post = {
 	post: this.post,
 	time: this.time,
 };
-mongodb.open(function(err, db) {
+MongoClient.connect(url,function(err, db) {
 	if (err) {
 		return callback(err);
 	}
 // 读取 posts 集合
 db.collection('posts', function(err, collection) {
 	if (err) {
-		mongodb.close();
+		//mongodb.close();
 		return callback(err);
 	}
 // 为 user 属性添加索引
 collection.ensureIndex('user');
 // 写入 post 文档
 collection.insert(post, {safe: true}, function(err, post) {
-	mongodb.close();
+	//mongodb.close();
 	callback(err, post);
 });
 });
 });
 };
 Post.get = function get(username, callback) {
-	mongodb.open(function(err, db) {
+	MongoClient.connect(url,function(err, db) {
 		if (err) {
 			return callback(err);
 		}
-// 读取 posts 集合
-db.collection('posts', function(err, collection) {
-	if (err) {
-		mongodb.close();
-		return callback(err);
-	}
+		// 读取 posts 集合
+		db.collection('posts', function(err, collection) {
+			if (err) {
+				//mongodb.close();
+				return callback(err);
+			}
 
 	var query = {};
 	if (username) {
 		query.user = username;
 	}
 	collection.find(query).sort({time: -1}).toArray(function(err, docs) {
-		mongodb.close();
+		//mongodb.close();
 		if (err) {
 			callback(err, null);
 		}
