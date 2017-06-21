@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require("../models/user");
 var crypto = require('crypto');//问：这个需要安装么？
-var Post = require("../models/user");
+var Post = require("../models/post");
 
 //问：这里面可以安装拦截器么？
 
