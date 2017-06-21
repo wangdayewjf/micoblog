@@ -11,8 +11,6 @@ var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var cookieSession = require('cookie-session');
 var partials = require('express-partials');
-
-
 app.use(partials());
 
 app.set("views", __dirname + "/views");
