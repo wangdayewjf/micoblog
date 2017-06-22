@@ -1,4 +1,4 @@
-//var mongodb = require('./db');
+var mongodb = require('./db');
 
 var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');//问：这是不是记录日志的？
