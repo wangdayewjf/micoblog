@@ -1,0 +1,2 @@
+[2017-06-22 22:12:19.000] [INFO] normal - ::ffff:127.0.0.1 - - "GET / HTTP/1.1" 500 1922 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36"
+[2017-06-22 22:12:19.618] [INFO] normal - ::ffff:127.0.0.1 - - "GET /favicon.ico HTTP/1.1" 404 150 "http://127.0.0.1:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36"

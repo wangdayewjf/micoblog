@@ -11,13 +11,20 @@ var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var cookieSession = require('cookie-session');
 var partials = require('express-partials');
-var logger = require('morgan');
-
+//var logger = require('morgan'); 原始logger写入方式
+var log4js = require('log4js');
 var fs = require('fs');
-var accessLogfile = fs.createWriteStream('access.log', {flags: 'a'});
-var errorLogfile = fs.createWriteStream('error.log', {flags: 'a'});
+/*var accessLogfile = fs.createWriteStream('access.log', {flags: 'a'});
+var errorLogfile = fs.createWriteStream('error.log', {flags: 'a'});*/
+var log4js_config = require("./log4js.json");
+log4js.configure(log4js_config);
+
+var logger = log4js.getLogger('normal');
+logger.setLevel('INFO');
+app.use(log4js.connectLogger(logger, {level:log4js.levels.INFO}));
+
 //app.use(logger('dev'));
-app.use(logger('combined',{stream: accessLogfile}));//添加访问日志。
+//app.use(logger('combined',{stream: accessLogfile}));//添加访问日志。
 app.use(partials());
 
 app.set("views", __dirname + "/views");
