@@ -11,18 +11,35 @@ var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var cookieSession = require('cookie-session');
 var partials = require('express-partials');
+var logger = require('morgan');
+
+var fs = require('fs');
+var accessLogfile = fs.createWriteStream('access.log', {flags: 'a'});
+var errorLogfile = fs.createWriteStream('error.log', {flags: 'a'});
+//app.use(logger('dev'));
+app.use(logger('combined',{stream: accessLogfile}));//添加访问日志。
 app.use(partials());
 
 app.set("views", __dirname + "/views");
 app.set('view options', {
-layout: true
+	layout: true
 });
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride())
 app.use(cookieParser());
 
-
+var env = process.env.NODE_ENV || 'development';
+if ('development' == env) {
+  
+}
+if ("production" == env){
+	app.error(function(err,req,res,next){
+		var meta = '['+ new Date() + ']'+req.url+'\n';
+		errorLogfile.write(meta + err.stack + "\n");
+		next();
+	});
+}
 //app.use(express.router(routes));
 app.use(session({
 	secret: settings.cookieSecret,

@@ -10,8 +10,6 @@ function User(user){
 }
 
 
-
-
 User.prototype.save = function(callback){
 	var user = {
 		name :this.name,

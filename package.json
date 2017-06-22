@@ -16,6 +16,7 @@
     "mongodb": ">= 0.9.9",
     "connect-mongo": ">= 0.1.7",
     "passport": "^0.2.2",
-    "passport-steam": "^0.1.6"
+    "passport-steam": "^0.1.6",
+    "morgan": "~1.0.0"
   }
 }

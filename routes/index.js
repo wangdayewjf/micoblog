@@ -7,6 +7,7 @@ var Post = require("../models/post");
 //问：这里面可以安装拦截器么？
 
 router.get('/', function(req, res) {
+	throw new Error("this is a test log error ");
 	res.render('index', {
 		title: "首页",
 		layout: 'layout'
