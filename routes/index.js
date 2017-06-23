@@ -3,16 +3,30 @@ var router = express.Router();
 var User = require("../models/user");
 var crypto = require('crypto');//问：这个需要安装么？
 var Post = require("../models/post");
-
+var log4js = require('log4js');
+var logger = log4js.getLogger('code_log');
 //问：这里面可以安装拦截器么？
 
+
 router.get('/', function(req, res) {
-	throw new Error("this is a test log error ");
+	logger.fatal("访问主页，进程"+process.pid+"提供服务"); 
+	//throw new Error("this is a test log error ");//测试error
 	res.render('index', {
 		title: "首页",
 		layout: 'layout'
 	});
 });
+
+router.get('/logTest', function(req, res) {
+
+	for( var i=0 ; i<10000 ; i++){
+		console.log(i);
+	}
+
+	res.end("logTest请求完毕");
+
+});
+
 router.get("/reg", function(req, res) {
 	res.render("reg", {
 		title: "用户注册"

@@ -1,11 +1,18 @@
 {
     "appenders": [
+         {
+            "type": "file",
+            "filename": "logs/log_console/console.log",
+            "maxLogSize": 104800,
+            "backups": 100,
+            "category": "console"
+        },
         {
             "type": "file",
             "filename": "./logs/log_file/file.log",
             "maxLogSize": 104800,
             "backups": 100,
-            "category": "normal"
+            "category": "nomal"
         },
         {
             "category": "code_log",
@@ -16,7 +23,8 @@
         }
     ],
     "levels": {
-        "normal": "ALL",
+        "nomal": "ALL",
         "code_log": "ALL"
-    }
-}   
+    },
+    "replaceConsole": true
+}

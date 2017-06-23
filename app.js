@@ -19,12 +19,13 @@ var errorLogfile = fs.createWriteStream('error.log', {flags: 'a'});*/
 var log4js_config = require("./log4js.json");
 log4js.configure(log4js_config);
 
-var logger = log4js.getLogger('normal');
+var logger = log4js.getLogger('nomal');
 logger.setLevel('INFO');
 app.use(log4js.connectLogger(logger, {level:log4js.levels.INFO}));
 
 //app.use(logger('dev'));
 //app.use(logger('combined',{stream: accessLogfile}));//添加访问日志。
+
 app.use(partials());
 
 app.set("views", __dirname + "/views");
@@ -77,8 +78,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(router);
 
-
-app.listen(3001);
-
+app.listen(3001);//单线程时，用它完成
 
 module.exports = app;

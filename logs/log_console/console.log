@@ -1,0 +1,110 @@
+[2017-06-23 09:52:23.467] [ERROR] console - Error: this is a test log error 
+    at D:\node开发\micoblogGitHub\routes\index.js:10:8
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:174:3)
+    at router (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:317:13)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at SendStream.error (D:\node开发\micoblogGitHub\node_modules\serve-static\index.js:121:7)
+[2017-06-23 09:53:33.291] [ERROR] console - Error: this is a test log error 
+    at D:\node开发\micoblogGitHub\routes\index.js:10:8
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:174:3)
+    at router (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:317:13)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at SendStream.error (D:\node开发\micoblogGitHub\node_modules\serve-static\index.js:121:7)
+[2017-06-23 09:58:55.014] [ERROR] console - Error: this is a test log error 
+    at D:\node开发\micoblogGitHub\routes\index.js:10:8
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:174:3)
+    at router (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:317:13)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at SendStream.error (D:\node开发\micoblogGitHub\node_modules\serve-static\index.js:121:7)
+[2017-06-23 10:03:00.295] [ERROR] console - Error: this is a test log error 
+    at D:\node开发\micoblogGitHub\routes\index.js:10:8
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:174:3)
+    at router (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:317:13)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at SendStream.error (D:\node开发\micoblogGitHub\node_modules\serve-static\index.js:121:7)
+[2017-06-23 15:42:54.487] [ERROR] console - ReferenceError: logInfo is not defined
+    at D:\node开发\micoblogGitHub\routes\index.js:11:2
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:174:3)
+    at router (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:317:13)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at SendStream.error (D:\node开发\micoblogGitHub\node_modules\serve-static\index.js:121:7)
+[2017-06-23 15:43:10.300] [ERROR] console - ReferenceError: logInfo is not defined
+    at D:\node开发\micoblogGitHub\routes\index.js:11:2
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node开发\micoblogGitHub\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:174:3)
+    at router (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\node开发\micoblogGitHub\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:317:13)
+    at D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\node开发\micoblogGitHub\node_modules\express\lib\router\index.js:275:10)
+    at SendStream.error (D:\node开发\micoblogGitHub\node_modules\serve-static\index.js:121:7)
+[2017-06-23 16:15:55.618] [INFO] console - 执行app.js文件
+[2017-06-23 16:16:05.345] [INFO] console - 执行app.js文件
+[2017-06-23 16:16:05.806] [INFO] console - 执行app.js文件
+[2017-06-23 16:16:06.123] [INFO] console - 执行app.js文件
+[2017-06-23 16:16:06.672] [INFO] console - 执行app.js文件
+[2017-06-23 16:16:08.395] [INFO] console - 执行app.js文件
+[2017-06-23 16:16:20.267] [INFO] console - 执行app.js文件
+[2017-06-23 16:18:04.046] [INFO] console - 执行app.js文件
