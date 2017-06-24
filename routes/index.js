@@ -1,10 +1,11 @@
-var express = require('express');
+ var express = require('express');
 var router = express.Router();
 var User = require("../models/user");
 var crypto = require('crypto');//问：这个需要安装么？
 var Post = require("../models/post");
 var log4js = require('log4js');
 var logger = log4js.getLogger('code_log');
+var fs = require('fs');
 //问：这里面可以安装拦截器么？
 
 
@@ -18,12 +19,15 @@ router.get('/', function(req, res) {
 });
 
 router.get('/logTest', function(req, res) {
-
-	for( var i=0 ; i<10000 ; i++){
-		console.log(i);
-	}
-
-	res.end("logTest请求完毕");
+	var sty = 0;
+	fs.readFile('./logs/log_date/date', function(err, data){
+    if(err){
+        console.log('文件读取失败');
+    }else{
+        console.log(data);  // 输出 <Buffer 68 65 6c 6c 6f 0a>
+    }
+});
+	res.end(process.pid+"的logTest请求完毕");
 
 });
 
